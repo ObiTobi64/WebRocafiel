@@ -1,31 +1,44 @@
-// src/pages/Header.tsx
 import React from 'react';
-import { AppBar, Toolbar, Button, Typography } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography, IconButton, useMediaQuery } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../img/logo.png'; 
+import { useTheme } from '@mui/material/styles';
+
 const Header: React.FC = () => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detecta pantallas móviles
+
     return (
         <AppBar
             position="static"
-            sx={{ backgroundColor: 'rgba(255, 255, 255, 0.0)', color: '#fff',backdropFilter: 'blur(24px)',flexShrink: 0}} // Color RGBA para mayor transparencia
+            sx={{ backgroundColor: 'rgba(255, 255, 255, 0.0)', color: '#fff', backdropFilter: 'blur(24px)', flexShrink: 0 }} 
             elevation={0}
         >
-            <Toolbar>
-                <Typography variant="h6" style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center' }}>
                     <img 
-                        src={logo} // Ruta a tu imagen
+                        src={logo} 
                         alt="Icono de ROCAFIEL"
-                        style={{ width: '30px', height: '40px', marginRight: '8px' }} // Ajusta el tamaño según sea necesario
+                        style={{ width: '30px', height: '50px', marginRight: '8px' }} 
                     />
                     ROCAFIEL
                 </Typography>
-                <div style={{ display: 'flex', gap: '16px', marginLeft: '100%' }}>   
-                    <Button color="inherit">Inicio</Button>
-                    <Button color="inherit">Nosotros</Button>
-                    <Button color="inherit">Carreras</Button>
-                    <Button color="inherit">Eventos</Button>
-                    <Button color="inherit">Contacto</Button>
-                    <Button color="inherit">Alumnos</Button>
-                </div>
+
+                {/* Alterna entre el menú completo y el icono de hamburguesa */}
+                {isMobile ? (
+                    <IconButton edge="start" color="inherit" aria-label="menu">
+                        <MenuIcon />
+                    </IconButton>
+                ) : (
+                    <div style={{ display: 'flex', gap: '16px' }}>
+                        <Button color="inherit">Inicio</Button>
+                        <Button color="inherit">Nosotros</Button>
+                        <Button color="inherit">Carreras</Button>
+                        <Button color="inherit">Eventos</Button>
+                        <Button color="inherit">Contacto</Button>
+                        <Button color="inherit">Alumnos</Button>
+                    </div>
+                )}
             </Toolbar>
         </AppBar>
     );
