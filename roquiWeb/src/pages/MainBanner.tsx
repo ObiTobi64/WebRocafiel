@@ -1,40 +1,67 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
+import fondoVideo from '../video/fondoo.mp4'; // Ajusta la ruta según la ubicación de tu archivo
+
 
 const MainBanner: React.FC = () => {
-  return (
+    return (
     <Box
-      sx={{
+        sx={{
+        position: 'relative', // Permite posicionar el video detrás del contenido
         height: '100vh',
-        width: '200%', 
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        backgroundColor: '#f5f5f5',
-      }}
+        width: '191%',
+        overflowX: 'hidden', 
+        overflow: 'hidden', // Oculta cualquier contenido que se salga del contenedor
+        }}
     >
-      <Box sx={{ color: '#fff', backgroundColor: '#333', padding: '40px', borderRadius: '8px' }}>
+        <video
+        src={fondoVideo} // Reemplaza esto con la URL de tu video
+        autoPlay
+        loop
+        muted
+        style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            minWidth: '100%',
+            minHeight: '100%',
+            width: 'auto',
+            height: 'auto',
+            zIndex: 1, // Asegúrate de que el video esté detrás
+            transform: 'translate(-50%, -50%)', // Centra el video
+        }}
+        />
+        <Box
+            sx={{
+                position: 'relative', 
+                zIndex: 2, 
+                color: '#fff',
+                backgroundColor: 'rgba(51, 51, 51, 0.0)', 
+                padding: '13%',
+                borderRadius: '8px',
+                textAlign: 'center',
+        }}
+        >
         <Typography variant="h3" gutterBottom>
-          Entrenando hijos e hijas de Dios
+            Entrenando hijos e hijas de Dios
         </Typography>
         <Typography variant="h6" gutterBottom>
-          para manifestar el Reino eterno en las naciones
+            para manifestar el Reino eterno en las naciones
         </Typography>
         <Typography variant="body1" gutterBottom>
-          ¿Estás listo para ser parte?
+            ¿Estás listo para ser parte?
         </Typography>
-        <Box sx={{ display: 'flex', gap: '20px', marginTop: '20px', justifyContent: 'center' }}>
-          <Button variant="outlined" color="inherit" size="large">
+        <Box sx={{ display: 'flex', gap: '30px', marginTop: '20px', justifyContent: 'center' }}>
+            <Button variant="outlined" color="inherit" size="large" sx={{ borderRadius: '25px' }}>
             Nuestra Visión
-          </Button>
-          <Button variant="contained" color="primary" size="large">
+            </Button>
+            <Button variant="contained" size="large" sx={{ borderRadius: '25px' ,color:"#000" , backgroundColor: '#FFFFFF'}}>
             Carreras Ministeriales
-          </Button>
+            </Button>
         </Box>
-      </Box>
+        </Box>
     </Box>
-  );
+    );
 };
 
 export default MainBanner;
