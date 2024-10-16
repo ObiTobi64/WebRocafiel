@@ -45,13 +45,13 @@ const MainBanner: React.FC = () => {
                 }}
             >
                 <Typography variant={isMobile ? 'h4' : 'h3'} gutterBottom>
-                    Entrenando hijos e hijas de Dios
+                    TEXTO
                 </Typography>
                 <Typography variant={isMobile ? 'body2' : 'h6'} gutterBottom>
-                    para manifestar el Reino eterno en las naciones
+                    TEXTO
                 </Typography>
                 <Typography variant={isMobile ? 'caption' : 'body1'} gutterBottom>
-                    ¿Estás listo para ser parte?
+                    TEXTO?
                 </Typography>
                 <Box
                     sx={{

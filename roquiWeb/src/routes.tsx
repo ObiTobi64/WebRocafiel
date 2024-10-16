@@ -1,13 +1,12 @@
-// src/routes.tsx
 import { Route, Routes } from 'react-router-dom';
-import MainBanner from './pages/MainBanner';
 import Layout from './layout/Layout';
+import HomePage from './pages/HomePage/HomePage';
+
 
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Layout> <MainBanner /> </Layout>} />
-      <Route path="/main-banner" element={<Layout><MainBanner /></Layout>} />
+      <Route path="/" element={<Layout><HomePage /></Layout>} />
     </Routes>
   );
 };
