@@ -8,7 +8,7 @@ const Vision: React.FC = () => {
       sx={{
         position: 'relative',
         height: '500px',
-        backgroundImage: `url('src/img/vision.jpg')`, // Cambia esta ruta a tu imagen de visión
+        backgroundImage: `url('src/img/vision.jpg')`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex',
