@@ -9,7 +9,10 @@ const Header: React.FC = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detecta pantallas móviles
     const navigate = useNavigate();
-    
+
+    const handleLogoClick = () => {
+        navigate('/'); // Redirige a la página principal (HomePage)
+    };
     const handleAdvancedClick = () =>{
         navigate('/advanced');
     };
@@ -21,11 +24,13 @@ const Header: React.FC = () => {
         >
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img 
+                    <IconButton onClick={handleLogoClick} sx={{ padding: 0 }} disableRipple>
+                        <img 
                         src={logo} 
                         alt="Icono de ROCAFIEL"
                         style={{ width: '30px', height: '50px', marginRight: '8px' }} 
-                    />
+                        />
+                    </IconButton>
                     ROCAFIEL
                 </Typography>
 
