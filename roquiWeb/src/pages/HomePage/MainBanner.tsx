@@ -5,7 +5,7 @@ import { useTheme, useMediaQuery } from '@mui/material';
 
 const MainBanner: React.FC = () => {
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detecta pantallas móviles
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
 
     return (
         <Box
@@ -14,6 +14,7 @@ const MainBanner: React.FC = () => {
                 height: '100vh',
                 width: '100%',
                 overflow: 'hidden',
+                paddingTop: '80px',
             }}
         >
             <video
@@ -23,7 +24,7 @@ const MainBanner: React.FC = () => {
                 muted
                 style={{
                     position: 'absolute',
-                    top: '50%',
+                    top: '73%',
                     left: '50%',
                     minWidth: '100%',
                     minHeight: '100%',
@@ -31,6 +32,7 @@ const MainBanner: React.FC = () => {
                     height: 'auto',
                     zIndex: 1,
                     transform: 'translate(-50%, -50%)',
+        
                 }}
             />
             <Box

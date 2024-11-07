@@ -24,19 +24,16 @@ const Header: React.FC = () => {
                     ROCAFIEL
                 </Typography>
 
-                {/* Alterna entre el menú completo y el icono de hamburguesa */}
                 {isMobile ? (
                     <IconButton edge="start" color="inherit" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
                 ) : (
                     <div style={{ display: 'flex', gap: '16px' }}>
-                        <Button color="inherit">Inicio</Button>
+                        <Button color="inherit">Avanzadas</Button>
                         <Button color="inherit">Nosotros</Button>
-                        <Button color="inherit">Carreras</Button>
                         <Button color="inherit">Eventos</Button>
-                        <Button color="inherit">Contacto</Button>
-                        <Button color="inherit">Alumnos</Button>
+                        <Button color="inherit">Contactos</Button>
                     </div>
                 )}
             </Toolbar>
