@@ -24,7 +24,7 @@ const MainBanner: React.FC = () => {
                 muted
                 style={{
                     position: 'absolute',
-                    top: '73%',
+                    top: '71%',
                     left: '50%',
                     minWidth: '100%',
                     minHeight: '100%',

@@ -3,11 +3,16 @@ import { AppBar, Toolbar, Button, Typography, IconButton, useMediaQuery } from '
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../img/logo.png'; 
 import { useTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 const Header: React.FC = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detecta pantallas móviles
-
+    const navigate = useNavigate();
+    
+    const handleAdvancedClick = () =>{
+        navigate('/advanced');
+    };
     return (
         <AppBar
             position="fixed"
@@ -30,7 +35,7 @@ const Header: React.FC = () => {
                     </IconButton>
                 ) : (
                     <div style={{ display: 'flex', gap: '16px' }}>
-                        <Button color="inherit">Avanzadas</Button>
+                        <Button color="inherit" onClick={handleAdvancedClick}>Avanzadas</Button>
                         <Button color="inherit">Nosotros</Button>
                         <Button color="inherit">Eventos</Button>
                         <Button color="inherit">Contactos</Button>
