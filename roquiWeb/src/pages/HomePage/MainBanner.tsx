@@ -14,7 +14,7 @@ const MainBanner: React.FC = () => {
                 height: '100vh',
                 width: '100%',
                 overflow: 'hidden',
-                paddingTop: '80px',
+                paddingTop: '-20%',
             }}
         >
             <video
@@ -24,7 +24,7 @@ const MainBanner: React.FC = () => {
                 muted
                 style={{
                     position: 'absolute',
-                    top: '71%',
+                    top: '65%',
                     left: '50%',
                     minWidth: '100%',
                     minHeight: '100%',
@@ -32,7 +32,6 @@ const MainBanner: React.FC = () => {
                     height: 'auto',
                     zIndex: 1,
                     transform: 'translate(-50%, -50%)',
-        
                 }}
             />
             <Box
