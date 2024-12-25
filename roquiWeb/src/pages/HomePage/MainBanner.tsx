@@ -46,10 +46,10 @@ const MainBanner: React.FC = () => {
                 }}
             >
                 <Typography variant={isMobile ? 'h4' : 'h3'} gutterBottom>
-                    TEXTO
+                    PORQUE SOMOS ROCAFIEL
                 </Typography>
                 <Typography variant={isMobile ? 'body2' : 'h6'} gutterBottom>
-                    TEXTO
+                    LLAMADOS PARA SERVIR
                 </Typography>
                 <Typography variant={isMobile ? 'caption' : 'body1'} gutterBottom>
                     TEXTO?
