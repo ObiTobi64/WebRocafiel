@@ -7,11 +7,11 @@ import { useNavigate } from 'react-router-dom';
 
 const Header: React.FC = () => {
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detecta pantallas móviles
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const navigate = useNavigate();
 
     const handleLogoClick = () => {
-        navigate('/'); // Redirige a la página principal (HomePage)
+        navigate('/'); 
     };
     const handleAdvancedClick = () =>{
         navigate('/advanced');
