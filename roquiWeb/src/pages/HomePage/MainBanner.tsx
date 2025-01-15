@@ -37,25 +37,20 @@ const MainBanner: React.FC = () => {
             <Box
                 sx={{
                     position: 'relative',
-                    zIndex: 2,
+                    zIndex: 1,
                     color: '#fff',
                     backgroundColor: 'rgba(51, 51, 51, 0.0)',
-                    padding: isMobile ? '20%' : '5%',
+                    padding: isMobile ? '20%' : '7%',
                     textAlign: 'center',
                     borderRadius: '8px',
                 }}
             >
-                <Typography variant={isMobile ? 'h4' : 'h3'} gutterBottom>
-                    Rocafiel
-                </Typography>
-                <Typography variant={isMobile ? 'body2' : 'h6'} gutterBottom>
-                    Bienvenido a casa
-                </Typography>
+                <Typography variant={isMobile ? 'h4' : 'h1'} gutterBottom fontFamily={'initial'}>Rocafiel</Typography>
                 
                 <Box
                     sx={{
                         display: 'flex',
-                        gap: '20px',
+                        gap: '21px',
                         marginTop: '20px',
                         justifyContent: 'center',
                         flexDirection: isMobile ? 'column' : 'row',
@@ -64,7 +59,7 @@ const MainBanner: React.FC = () => {
                     <Button variant="outlined" color="inherit" size="large" sx={{ borderRadius: '25px' }}>
                         Nuestra Visión  
                     </Button>
-                    <Button variant="contained" size="large" sx={{ borderRadius: '25px', color: "#000", backgroundColor: '#FFFFFF' }}>
+                    <Button variant="contained" size="large" sx={{ borderRadius: '25px', color: "black", backgroundColor: '#E1DA7E' }}>
                         Carreras Ministeriales
                     </Button>
                 </Box>
