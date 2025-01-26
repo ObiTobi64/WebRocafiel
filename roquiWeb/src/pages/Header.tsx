@@ -16,6 +16,9 @@ const Header: React.FC = () => {
     const handleAdvancedClick = () =>{
         navigate('/advanced');
     };
+    const handleEventsClick = () =>{
+        navigate('/events');
+    };
     return (
         <AppBar
             position="fixed"
@@ -42,7 +45,7 @@ const Header: React.FC = () => {
                     <div style={{ display: 'flex', gap: '16px' }}>
                         <Button color="inherit" onClick={handleAdvancedClick}>Avanzadas</Button>
                         <Button color="inherit">Nosotros</Button>
-                        <Button color="inherit">Eventos</Button>
+                        <Button color="inherit" onClick={handleEventsClick}>Eventos</Button>
                         <Button color="inherit">Contactos</Button>
                     </div>
                 )}
