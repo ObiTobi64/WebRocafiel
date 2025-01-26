@@ -3,12 +3,12 @@ import { Carousel } from 'antd';
 import styled from 'styled-components';
 
 // Imágenes
-import image1 from '../../img/ChuquiLogo.jpg';
-import image2 from '../../img/ZonaELogo.jpg';
-import image3 from '../../img/ElAltoLogo.jpg';
-import image4 from '../../img/KramerLogo.jpg';
-import image5 from '../../img/SantaLogo.jpg';
-import image6 from '../../img/CochaLogo.png';
+import image1 from '../../img/Chuqui.png';
+import image2 from '../../img/ZonaEste.png';
+import image3 from '../../img/elAlto.png';
+import image4 from '../../img/Kramer.png';
+import image5 from '../../img/SanCruz.png';
+import image6 from '../../img/Cocha.png';
 
 // URLs
 const links = [
@@ -25,6 +25,7 @@ const CarouselContainer = styled.div`
     width: 400%;
     max-width: 1520px;
     margin: 0 auto;
+    margin-top: 54px;
     position: relative;
     
 `;
@@ -48,13 +49,13 @@ const Button = styled.a`
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    background-color: rgba(240, 225, 149, 0.86);
+    color: black;
     font-size: 16px;
     text-decoration: none;
     border-radius: 5px;
     &:hover {
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(102, 221, 106, 0.9);
     }
 `;
 
