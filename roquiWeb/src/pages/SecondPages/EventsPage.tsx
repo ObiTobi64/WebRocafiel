@@ -7,12 +7,13 @@ import imagen2 from '../../img/cam2.jpg';
 import imagen3 from '../../img/conVaro.jpg';
 import imagen4 from '../../img/canVaro1.jpg';
 import imagen5 from '../../img/mainEvent1.jpg';
+import imagen6 from '../../img/fondoE.png';
 
 
 // Estilo para el contenedor de la página
 const pageStyle: React.CSSProperties = {
-    backgroundColor: '#FFF7E3', // Color de fondo de la página
-    minHeight: '50vh',         // Asegura que el fondo cubra toda la altura de la página
+    backgroundImage: `url(${imagen6})`, // Color de fondo de la página
+    minHeight: '40vh',         // Asegura que el fondo cubra toda la altura de la página
     padding: '20px',            // Espaciado opcional para que el contenido no esté pegado a los bordes
 };
 
@@ -22,7 +23,7 @@ const coverStyle: React.CSSProperties = {
     backgroundPosition: 'center',          // Centra la imagen
     color: '#fff',                         // Color del texto
     textAlign: 'center',                   // Centra el texto
-    padding: '90px 20px',                 // Espaciado interno
+    padding: '80px 20px',                 // Espaciado interno
     marginBottom: '10px', 
     marginRight:'-20px',
     marginLeft:'-20px',                 // Espacio entre la portada y el carrusel
