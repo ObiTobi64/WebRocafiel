@@ -1,8 +1,11 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 
 
 const Vision: React.FC = () => {
+  
+      const theme = useTheme();
+        const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
   return (
     <Box
       sx={{
@@ -27,7 +30,7 @@ const Vision: React.FC = () => {
         }}
       >
         <Typography
-          variant="h4"
+          variant={isMobile ? 'h5' : 'h3'}
           sx={{
             letterSpacing: '1px',
             marginBottom: '16px',

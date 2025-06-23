@@ -45,7 +45,7 @@ const MainBanner: React.FC = () => {
                     borderRadius: '8px',
                 }}
             >
-                <Typography variant={isMobile ? 'h4' : 'h1'} gutterBottom fontFamily={'initial'}>Rocafiel</Typography>
+                <Typography variant={isMobile ? 'h2' : 'h1'} gutterBottom fontFamily={'initial'}>Rocafiel</Typography>
                 
                 <Box
                     sx={{
