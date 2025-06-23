@@ -4,7 +4,7 @@ import { Facebook, Instagram, YouTube, WhatsApp } from '@mui/icons-material';
 
 const Footer: React.FC = () => {
   return (
-    <footer style={{ backgroundColor: '#222', padding: '20px', textAlign: 'center', color: 'white' }}>
+    <footer style={{ backgroundColor: 'black', padding: '20px', textAlign: 'center', color: 'white' }}>
       <Typography variant="body2">© 2024 Rocafiel. Todos los derechos reservados.</Typography>
       
       <Box marginTop={2}>
@@ -33,3 +33,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
