@@ -14,7 +14,7 @@ const MainBanner: React.FC = () => {
                 height: '100vh',
                 width: '100%',
                 overflow: 'hidden',
-                paddingTop: '-10%',
+                paddingTop: '0%',
             }}
         >
             <video

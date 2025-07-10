@@ -1,6 +1,7 @@
 import MainBanner from './MainBanner';
 import Vision from './Vision';
 import Mision from './Mision';
+import Footer from '../Footer';
 
 const HomePage = () => {
   return (
@@ -8,6 +9,7 @@ const HomePage = () => {
       <MainBanner />
       <Vision />
       <Mision />
+      <Footer />
     
     </>
   );

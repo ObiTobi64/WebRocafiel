@@ -37,8 +37,9 @@ const Header: React.FC = () => {
     return (
         <AppBar
             position="fixed"
-            sx={{ backgroundColor: 'rgba(255, 255, 255, 0.0)', color: '#fff', backdropFilter: 'blur(24px)', flexShrink: 0 }} 
+            sx={{ backgroundColor: 'rgba(255, 255, 255, 0.0)', color: '#fff', backdropFilter: 'blur(24px)', flexShrink: 0}} 
             elevation={0}
+            
         >
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center' }}>

@@ -8,9 +8,9 @@ const App: React.FC = () => {
   return (
     <Router>
       <AppRoutes />
-      <div style={{ position: 'fixed', top: 0, left: 0, zIndex: 9999 }}>
+      {/* <div style={{ position: 'fixed', top: 0, left: 0, zIndex: 9999 }}>
         <Drag />
-      </div>
+      </div> */}
     </Router>
   );
 };

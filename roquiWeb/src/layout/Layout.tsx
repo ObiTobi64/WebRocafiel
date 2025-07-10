@@ -2,6 +2,7 @@
 import React, { ReactNode } from 'react';
 import Header from '../pages/Header';
 import Footer from '../pages/Footer';
+import Toolbar from '@mui/material/Toolbar/Toolbar';
 
 // Añade el tipo de props con ReactNode para children
 interface LayoutProps {
@@ -11,9 +12,10 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
     <>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Header/>
+        <Toolbar />
+        {children}
+        {/* <Footer /> */}
     </>
     );
 };
