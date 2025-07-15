@@ -7,6 +7,7 @@ const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f5f5f5;
   gap: 20px;
 `;
 
@@ -192,28 +193,14 @@ const RightSide = styled.div`
   p {
     font-size: 1.25rem;
     line-height: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   strong {
     font-weight: 700;
+    margin-bottom: 2rem;
   }
 
-  a {
-    background: white;
-    color: black;
-    font-weight: 500;
-    border-radius: 9999px;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background 0.3s;
-
-    &:hover {
-      background: #f1f1f1;
-    }
   }
 `;
 
@@ -301,9 +288,9 @@ AdvancedPage.IntroSection = ({
       <h3>{leftTitle}</h3>
       <img src={logoSrc} alt="Logo" />
       <a href={leftButtonHref}>
-        <Button>
-        {leftButtonText} <span>»</span>
-        </Button>x
+        <Button variant="contained" color="success" size="large" sx={{ borderRadius: '10px' }}>
+        {leftButtonText} 
+        </Button>
       </a>
     </LeftSide>
     <RightSide>
@@ -311,7 +298,9 @@ AdvancedPage.IntroSection = ({
       <p>{rightText}</p>
       <strong>{rightCallToAction}</strong>
       <a href={rightButtonHref}>
+        <Button variant="contained" color="error" size="large" sx={{ borderRadius: '10px' }}> 
         {rightButtonText} <span>»</span>
+        </Button>
       </a>
     </RightSide>
   </IntroSectionContainer>

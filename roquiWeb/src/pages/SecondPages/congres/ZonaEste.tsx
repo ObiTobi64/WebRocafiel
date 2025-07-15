@@ -81,13 +81,13 @@ const ZonaEsteCongre = () => {
         </video>
       </AdvancedModel.Video>
 
-      <AdvancedModel.Buttons>
+      {/* <AdvancedModel.Buttons>
         <div className="flex flex-center justify-center" role="group">
           <button className="btn btn-primary">Jovenes</button>
           <button className="btn btn-secondary">Matrimonios</button>
           <button className="btn btn-tertiary">Jovenes Plus</button>
         </div>
-      </AdvancedModel.Buttons>    
+      </AdvancedModel.Buttons>     */}
 
       <AdvancedModel.IntroSection
         backgroundImage="https://scontent.flpb3-1.fna.fbcdn.net/v/t39.30808-6/514419823_1166806308823234_782774815816271291_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=DLO-OPz5A1wQ7kNvwGnrXAD&_nc_oc=Adkmlgs-nxH8y3r2eXcj6TsqiGK0zMdJ98ZvDN1R7e39MPNR2pC2Mo0fZlHXrmqQ1SE&_nc_zt=23&_nc_ht=scontent.flpb3-1.fna&_nc_gid=utbS6Zd7fHS-an0P517J2A&oh=00_AfRMtTUz_ZS8O3-MtsYPlfucCUn6dIoN6oYtNMnMOOj-Uw&oe=68744513"
