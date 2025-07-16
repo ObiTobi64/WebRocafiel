@@ -18,7 +18,6 @@ const Section = styled.section`
 
 const BannerContainer = styled.section`
   position: relative;
-  width: 100%;
   height: 600px;
   overflow: hidden;
 
@@ -75,21 +74,22 @@ const VideoSection = styled.section`
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  background-color: black;
 `;
 
 const InfoMapContainer = styled.div`
   background-color: white;
   border-radius: 1.5rem;
   padding: 2rem 1rem;
-  margin: 1rem auto;
-  max-width: 1200px;
+  margin: 0rem auto;
+  max-width: 1500px;
 
-  display: flex;
+  display: fixed;
   flex-direction: column;
   gap: 10rem;
 
   @media (min-width: 1024px) {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 3rem;
@@ -116,7 +116,7 @@ const InfoBox = styled.div`
 
 const MapBox = styled.div`
   flex-shrink: 0;
-  width: 40%;
+  width: 100%;
 
   iframe {
     width: 95%;
@@ -246,6 +246,7 @@ AdvancedPage.Banner = ({
 
 
 AdvancedPage.Video = ({children}) => (
+    
     <VideoSection>{children}</VideoSection>
 );
 
@@ -335,7 +336,7 @@ AdvancedPage.InfoWithMap = ({
 }: {
   address: string;
   schedule: string;
-  schedule2: string;
+  schedule2?: string;
   children: React.ReactNode;
 }) => (
   <InfoMapContainer>
