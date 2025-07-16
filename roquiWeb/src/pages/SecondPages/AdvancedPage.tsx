@@ -18,7 +18,7 @@ const StyledImage = styled.img`
   width: 100%;
   height: auto;
   object-fit: contain;
-  max-height: 80vh;
+  max-height: 100vh;
 
   @media (max-width: 768px) {
     max-height: 50vh;

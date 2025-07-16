@@ -49,6 +49,27 @@ const BannerContent = styled.div`
 `;
 
 
+const BottomShape = styled.div`
+  position: relative;
+  bottom: 31px;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(170%);
+    height: 101px;
+
+    path {
+      fill: #000000;
+    }
+  }
+`;
+
+
 
 const ZonaEsteCongre = () => {
   return (
@@ -67,6 +88,11 @@ const ZonaEsteCongre = () => {
         }
         backgroundImage="/zn1.png"
       />
+            <BottomShape>
+              <svg viewBox="20 0 1200 60" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 892.25 80 1000 0z" />
+              </svg>
+            </BottomShape>
 
       <AdvancedModel.Video>
         <video
@@ -88,6 +114,15 @@ const ZonaEsteCongre = () => {
           <button className="btn btn-tertiary">Jovenes Plus</button>
         </div>
       </AdvancedModel.Buttons>     */}
+
+            <BottomShape style={{
+              height:'-20vh',
+              width:'100%'
+            }}>
+              <svg viewBox="20 0 1200 60" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 892.25 80 -1000 0z" />
+              </svg>
+            </BottomShape>
 
       <AdvancedModel.IntroSection
         backgroundImage="https://scontent.flpb3-1.fna.fbcdn.net/v/t39.30808-6/514419823_1166806308823234_782774815816271291_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=DLO-OPz5A1wQ7kNvwGnrXAD&_nc_oc=Adkmlgs-nxH8y3r2eXcj6TsqiGK0zMdJ98ZvDN1R7e39MPNR2pC2Mo0fZlHXrmqQ1SE&_nc_zt=23&_nc_ht=scontent.flpb3-1.fna&_nc_gid=utbS6Zd7fHS-an0P517J2A&oh=00_AfRMtTUz_ZS8O3-MtsYPlfucCUn6dIoN6oYtNMnMOOj-Uw&oe=68744513"

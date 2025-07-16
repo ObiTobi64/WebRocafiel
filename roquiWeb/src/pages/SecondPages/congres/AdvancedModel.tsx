@@ -7,7 +7,7 @@ const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #FF894F;
   gap: 20px;
 `;
 
