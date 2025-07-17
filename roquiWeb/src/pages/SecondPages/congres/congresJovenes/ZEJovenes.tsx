@@ -134,19 +134,17 @@ const ZonaEsteCongre = () => {
       </div>
       </AdvancedModel.Video>
 
-      <AdvancedModel.InfoWithMap
-        address="Horario"
-        schedule="7:30 PM - 9:00 PM"
+      <AdvancedModel.LocationSection
+        address="Av. Carlos Loayza Beltran, La Paz"
+        horario="8:00 PM - 9:30 PM"
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.441034829883!2d-68.10695319999999!3d-16.5038175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21c99c709177%3A0x2b6a9aeada63abec!2sROCAFIEL%20ZONA%20ESTE%20-%20Congregaci%C3%B3n%20Cristiana!5e0!3m2!1ses-419!2sbo!4v1751904892497!5m2!1ses-419!2sbo"
-          width="100%"
-          height="300"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           style={{ border: 0 }}
         />
-      </AdvancedModel.InfoWithMap>
+      </AdvancedModel.LocationSection>
 
 
 

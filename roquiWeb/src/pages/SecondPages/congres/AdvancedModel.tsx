@@ -78,53 +78,61 @@ const VideoSection = styled.section`
 `;
 
 const InfoMapContainer = styled.div`
-  background-color: white;
-  border-radius: 1.5rem;
-  padding: 2rem 1rem;
-  margin: 0rem auto;
-  max-width: 1500px;
-
-  display: fixed;
+  display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 2rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin: 3rem auto;
+  max-width: 1000px;
 
-  @media (min-width: 1024px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3rem;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
   }
 `;
 
 const InfoBox = styled.div`
-  min-width: 400px;
+  flex: 1;
+  padding: 1rem;
 
   h2 {
     font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-    color: #000;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #ff894f;
+    display: inline-block;
+    padding-bottom: 0.5rem;
   }
 
   p {
-    color: #000;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+
+    strong {
+      color: #ff894f;
+      font-weight: 600;
+    }
   }
 `;
 
 const MapBox = styled.div`
-  flex-shrink: 0;
-  width: 100%;
+  flex: 1;
+  padding: 1rem;
 
   iframe {
-    width: 95%;
-    height: 400px;
-    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
     border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   }
-
 `;
 
 const ImageBackground = styled.div`
@@ -206,6 +214,77 @@ const RightSide = styled.div`
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+const LocationSectionContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #fff;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    height: auto;
+  }
+`;
+
+const LeftInfo = styled.div`
+  flex: 1;
+  background-color: #111;
+  color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #ff894f;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 1rem;
+
+    strong {
+      color: #ff894f;
+    }
+  }
+`;
+
+const RightMap = styled.div`
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+`;
+
+
 // --- Componente principal ---
 const AdvancedPage = ({ children }: { children: React.ReactNode }) => {
   return <PageWrapper>{children}</PageWrapper>;
@@ -263,6 +342,7 @@ AdvancedPage.Buttons = ({children}) => (
 
 AdvancedPage.IntroSection = ({
   backgroundImage,
+  backgroundPosition,
   logoSrc,
   leftTitle,
   leftButtonText,
@@ -274,10 +354,11 @@ AdvancedPage.IntroSection = ({
   rightButtonHref,
 }: {
   backgroundImage: string;
-  logoSrc: string;
+  backgroundPosition?: string;
+  logoSrc?: string;
   leftTitle: string;
-  leftButtonText: string;
-  leftButtonHref: string;
+  leftButtonText?: string;
+  leftButtonHref?: string;
   rightTitle: string;
   rightText: string;
   rightCallToAction: string;
@@ -285,9 +366,9 @@ AdvancedPage.IntroSection = ({
   rightButtonHref: string;
 }) => (
   <IntroSectionContainer>
-    <LeftSide style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <LeftSide style={{ backgroundImage: `url(${backgroundImage})`, backgroundPosition: backgroundPosition}}>
       <h3>{leftTitle}</h3>
-      <img src={logoSrc} alt="Logo" />
+      <img src={logoSrc} alt="" />
       <a href={leftButtonHref}>
         <Button variant="contained" color="success" size="large" sx={{ borderRadius: '10px' }}>
         {leftButtonText} 
@@ -328,28 +409,55 @@ AdvancedPage.IntroSection = ({
 //   </div>
 // );
 
-AdvancedPage.InfoWithMap = ({
+// AdvancedPage.InfoWithMap = ({
+//   address,
+//   schedule,
+//   schedule2,
+//   children,
+// }: {
+//   address: string;
+//   schedule: string;
+//   schedule2?: string;
+//   children: React.ReactNode;
+// }) => (
+//   <InfoMapContainer>
+//     <InfoBox>
+//       <h2>Dirección y horarios</h2>
+//       <p><strong>Dirección:</strong> {address}</p>
+//       <p><strong>Primer Turno:</strong> {schedule}</p>
+//       <p><strong>Segundo Turno:</strong> {schedule2}</p>
+//     </InfoBox>
+//     <MapBox>
+//       {children}
+//     </MapBox>
+//   </InfoMapContainer>
+// );
+
+AdvancedPage.LocationSection = ({
   address,
   schedule,
   schedule2,
+  horario,
   children,
 }: {
   address: string;
-  schedule: string;
+  schedule?: string;
   schedule2?: string;
+  horario?:string;
   children: React.ReactNode;
 }) => (
-  <InfoMapContainer>
-    <InfoBox>
+  <LocationSectionContainer>
+    <LeftInfo>
       <h2>Dirección y horarios</h2>
       <p><strong>Dirección:</strong> {address}</p>
-      <p><strong>Primer Turno:</strong> {schedule}</p>
-      <p><strong>Segundo Turno:</strong> {schedule2}</p>
-    </InfoBox>
-    <MapBox>
+      {horario && <p><strong>Horario: </strong> {horario}</p>}
+      {schedule && <p><strong>Primer Turno:</strong> {schedule}</p>}
+      {schedule2 && <p><strong>Segundo Turno:</strong> {schedule2}</p>}
+    </LeftInfo>
+    <RightMap>
       {children}
-    </MapBox>
-  </InfoMapContainer>
+    </RightMap>
+  </LocationSectionContainer>
 );
 
 

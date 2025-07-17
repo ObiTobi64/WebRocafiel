@@ -10,7 +10,7 @@ const EventCarousel: React.FC = () => {
     <div
       style={{
         width: '100%',
-        maxWidth: '400px',
+        maxWidth: '500px',
         margin: '0 auto',
         padding: '20px 10px',
       }}

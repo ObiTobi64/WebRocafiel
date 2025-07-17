@@ -3,9 +3,11 @@ import React from 'react';
 import EventCarusel from '../../components/EventCarusel';
 import fondo from '../../img/fondoE.png';
 import portada from '../../img/mainEvent1.jpg';
+import Footer from '../Footer';
 
 const EventsPage: React.FC = () => {
   return (
+    <>
     <div
       style={{
         backgroundImage: `url(${fondo})`,
@@ -22,7 +24,7 @@ const EventsPage: React.FC = () => {
           backgroundPosition: 'center',
           color: '#fff',
           textAlign: 'center',
-          padding: '80px 20px',
+          padding: '90px 20px',
           margin: '0 -20px 20px',
         }}
       >
@@ -54,6 +56,8 @@ const EventsPage: React.FC = () => {
         <EventCarusel />
       </div>
     </div>
+      <Footer />
+    </>
   );
 };
 
