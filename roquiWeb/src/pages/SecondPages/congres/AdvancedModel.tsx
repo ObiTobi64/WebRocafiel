@@ -77,64 +77,6 @@ const VideoSection = styled.section`
   background-color: black;
 `;
 
-const InfoMapContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  background-color: #ffffff;
-  border-radius: 1.5rem;
-  padding: 2rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  margin: 3rem auto;
-  max-width: 1000px;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-`;
-
-const InfoBox = styled.div`
-  flex: 1;
-  padding: 1rem;
-
-  h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 1.5rem;
-    border-bottom: 3px solid #ff894f;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-  }
-
-  p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 1rem;
-
-    strong {
-      color: #ff894f;
-      font-weight: 600;
-    }
-  }
-`;
-
-const MapBox = styled.div`
-  flex: 1;
-  padding: 1rem;
-
-  iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 300px;
-    border: none;
-    border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-  }
-`;
-
 const ImageBackground = styled.div`
   position: absolute;
   top: 0;
@@ -153,7 +95,7 @@ const IntroSectionContainer = styled.section`
   @media (min-width: 1024px) {
     flex-direction: row;
     height: 600px;
-    width:100%;
+    width: 100%;
   }
 `;
 
@@ -238,7 +180,7 @@ const LeftInfo = styled.div`
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    border-bottom: 3px solid #F1EFEC;
+    border-bottom: 3px solid #f1efec;
     display: inline-block;
     padding-bottom: 0.5rem;
   }
@@ -249,7 +191,7 @@ const LeftInfo = styled.div`
     margin-bottom: 1rem;
 
     strong {
-      color: #1DCD9F;
+      color: #1dcd9f;
     }
   }
 `;
@@ -271,7 +213,7 @@ const RightMap = styled.div`
   }
 `;
 
-//Seccion texto 
+//Seccion texto
 
 const QuoteSection = styled.section`
   display: flex;
@@ -303,13 +245,20 @@ const QuoteAuthor = styled.p`
   margin-top: 1rem;
   font-size: 1rem;
   color: #666;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 `;
 
-
 // --- Componente principal ---
-const AdvancedPage = ({ children, backgroundColor }: { children: React.ReactNode,backgroundColor?: string; }) => {
-  return <PageWrapper backgroundColor={backgroundColor}>{children}</PageWrapper>;
+const AdvancedPage = ({
+  children,
+  backgroundColor,
+}: {
+  children: React.ReactNode;
+  backgroundColor?: string;
+}) => {
+  return (
+    <PageWrapper backgroundColor={backgroundColor}>{children}</PageWrapper>
+  );
 };
 
 // --- Subcomponentes ---
@@ -332,35 +281,37 @@ AdvancedPage.Banner = ({
       )}
 
       {backgroundImage && (
-        <ImageBackground style={{ backgroundImage: `url(${backgroundImage})` }} />
+        <ImageBackground
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        />
       )}
 
       <Overlay />
       <BannerContent>
-        <h1 >{title}</h1>
+        <h1>{title}</h1>
       </BannerContent>
     </BannerContainer>
   );
 };
 
+AdvancedPage.Gallery = ({ children }) => {
+  <div>{children}</div>;
+};
 
+AdvancedPage.Video = ({ children }) => <VideoSection>{children}</VideoSection>;
 
-
-AdvancedPage.Video = ({children}) => (
-    
-    <VideoSection>{children}</VideoSection>
-);
-
-AdvancedPage.Buttons = ({children}) => (
+AdvancedPage.Buttons = ({ children }) => (
   <Section>
-      <VideoSection>
-      <button type="button" className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-s-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">  
+    <VideoSection>
+      <button
+        type="button"
+        className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-s-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
+      >
         {children}
       </button>
-      </VideoSection>
-      
+    </VideoSection>
   </Section>
-)
+);
 
 AdvancedPage.IntroSection = ({
   backgroundImage,
@@ -388,12 +339,22 @@ AdvancedPage.IntroSection = ({
   rightButtonHref: string;
 }) => (
   <IntroSectionContainer>
-    <LeftSide style={{ backgroundImage: `url(${backgroundImage})`, backgroundPosition: backgroundPosition}}>
+    <LeftSide
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: backgroundPosition,
+      }}
+    >
       <h3>{leftTitle}</h3>
       <img src={logoSrc} alt="" />
       <a href={leftButtonHref}>
-        <Button variant="contained" color="success" size="large" sx={{ borderRadius: '10px' }}>
-        {leftButtonText} 
+        <Button
+          variant="contained"
+          color="success"
+          size="large"
+          sx={{ borderRadius: "10px" }}
+        >
+          {leftButtonText}
         </Button>
       </a>
     </LeftSide>
@@ -402,8 +363,13 @@ AdvancedPage.IntroSection = ({
       <p>{rightText}</p>
       <strong>{rightCallToAction}</strong>
       <a href={rightButtonHref}>
-        <Button variant="contained" color="error" size="large" sx={{ borderRadius: '10px' }}> 
-        {rightButtonText} <span>»</span>
+        <Button
+          variant="contained"
+          color="error"
+          size="large"
+          sx={{ borderRadius: "10px" }}
+        >
+          {rightButtonText} <span>»</span>
         </Button>
       </a>
     </RightSide>
@@ -414,56 +380,15 @@ AdvancedPage.Quote = () => (
   <QuoteSection>
     <div>
       <QuoteText>
-        Preocupémonos los unos por los otros, a fin de estimularnos al amor y a las buenas obras. No dejemos de congregarnos, como acostumbran hacerlo algunos, sino animémonos unos a otros, y con mayor razón ahora que vemos que aquel día se acerca.
+        Preocupémonos los unos por los otros, a fin de estimularnos al amor y a
+        las buenas obras. No dejemos de congregarnos, como acostumbran hacerlo
+        algunos, sino animémonos unos a otros, y con mayor razón ahora que vemos
+        que aquel día se acerca.
       </QuoteText>
       <QuoteAuthor>Hebreos 10:24-25.</QuoteAuthor>
     </div>
   </QuoteSection>
 );
-
-// AdvancedPage.Info = ({
-//   address,
-//   schedule,
-// }: {
-//   address: string;
-//   schedule: string;
-// }) => (
-//   <Section>
-//     <h2>Dirección y horarios</h2>
-//     <p><strong>Dirección:</strong> {address}</p>
-//     <p><strong>Horario:</strong> {schedule}</p>
-//   </Section>
-// );
-
-// AdvancedPage.Map = ({children}) => (
-//   <div>
-//     {children}
-//   </div>
-// );
-
-// AdvancedPage.InfoWithMap = ({
-//   address,
-//   schedule,
-//   schedule2,
-//   children,
-// }: {
-//   address: string;
-//   schedule: string;
-//   schedule2?: string;
-//   children: React.ReactNode;
-// }) => (
-//   <InfoMapContainer>
-//     <InfoBox>
-//       <h2>Dirección y horarios</h2>
-//       <p><strong>Dirección:</strong> {address}</p>
-//       <p><strong>Primer Turno:</strong> {schedule}</p>
-//       <p><strong>Segundo Turno:</strong> {schedule2}</p>
-//     </InfoBox>
-//     <MapBox>
-//       {children}
-//     </MapBox>
-//   </InfoMapContainer>
-// );
 
 AdvancedPage.LocationSection = ({
   address,
@@ -475,29 +400,37 @@ AdvancedPage.LocationSection = ({
   address: string;
   schedule?: string;
   schedule2?: string;
-  horario?:string;
+  horario?: string;
   children: React.ReactNode;
 }) => (
   <LocationSectionContainer>
     <LeftInfo>
       <h2>Dirección y horarios</h2>
-      <p><strong>Dirección:</strong> {address}</p>
-      {horario && <p><strong>Horario: </strong> {horario}</p>}
-      {schedule && <p><strong>Primer Turno:</strong> {schedule}</p>}
-      {schedule2 && <p><strong>Segundo Turno:</strong> {schedule2}</p>}
+      <p>
+        <strong>Dirección:</strong> {address}
+      </p>
+      {horario && (
+        <p>
+          <strong>Horario: </strong> {horario}
+        </p>
+      )}
+      {schedule && (
+        <p>
+          <strong>Primer Turno:</strong> {schedule}
+        </p>
+      )}
+      {schedule2 && (
+        <p>
+          <strong>Segundo Turno:</strong> {schedule2}
+        </p>
+      )}
     </LeftInfo>
-    <RightMap>
-      {children}
-    </RightMap>
+    <RightMap>{children}</RightMap>
   </LocationSectionContainer>
 );
 
-
 AdvancedPage.Footer = ({ children }) => (
-  <div className="w-full">
-    {children}
-  </div>
+  <div className="w-full">{children}</div>
 );
-
 
 export default AdvancedPage;

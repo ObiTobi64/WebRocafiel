@@ -1,10 +1,10 @@
 import AdvancedModel from "../AdvancedModel";
 import styled from "styled-components";
-import logo from '../../../../img/logo.png';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import logo from "../../../../img/logo.png";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FadeContent from "../../../../components/effects/FadeContent";
 import BlurText from "../../../../components/effects/BlurText";
 
@@ -13,23 +13,6 @@ const TitleWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
-`;
-
-const MainTitle = styled.h1`
-  font-family: 'Dancing Script', cursive;
-  font-size: 4rem;
-  color: #FF3B30;
-  margin: 0;
-  line-height: 1;
-`;
-
-const Subtitle = styled.h2`
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  color: #1e1e1e;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  margin-top: 0.5rem;
 `;
 
 const BannerContent = styled.div`
@@ -70,8 +53,6 @@ const BottomShape = styled.div`
   }
 `;
 
-
-
 const ZonaEsteCongre = () => {
   function handleAnimationComplete(): void {
     throw new Error("Function not implemented.");
@@ -106,7 +87,7 @@ const ZonaEsteCongre = () => {
           <path d="M1200 0L0 0 -892.25 80 1000 0z" />
         </svg>
       </BottomShape>
-      
+
       <AdvancedModel.Video>
         <video
           src="/pre2.mp4"
@@ -119,19 +100,16 @@ const ZonaEsteCongre = () => {
           Tu navegador no soporta el video.
         </video>
         <div className="flex flex-col justify-center">
-      <BlurText 
-        text="Jovenes Zona Este"
-        className="text-4xl mb-8 ml-5 "
-      />
-      <BlurText
-        text="Zona Este se caracteriza por ser una congregación llena de jóvenes y niños de todas las edades que se encuentran en la zona este de la ciudad de Monterrey, México. Esta congregación se encuentra en la ciudad de Monterrey, México, y se caracteriza por ser una comunidad acogedora y respetuosa, con una atención especial a la salud y bienestar de sus miembros. Nos esforzamos por ser una comunidad acogedora y respetuosa, y nos esforzamos por ayudar a cada uno de nosotros a alcanzar nuestros objetivos y lograr nuestras metas. Juntos, somos más fuertes y más unidos que nunca. ¡Que disfrutes de esta experiencia única y agradable!"
-        delay={150}
-        animateBy="words"
-        direction="top"
-        onAnimationComplete={handleAnimationComplete}
-        className="text-2xl mb-8 ml-5"
-      />
-      </div>
+          <BlurText text="Jovenes Zona Este" className="text-4xl mb-8 ml-5 " />
+          <BlurText
+            text="Zona Este se caracteriza por ser una congregación llena de jóvenes y niños de todas las edades que se encuentran en la zona este de la ciudad de Monterrey, México. Esta congregación se encuentra en la ciudad de Monterrey, México, y se caracteriza por ser una comunidad acogedora y respetuosa, con una atención especial a la salud y bienestar de sus miembros. Nos esforzamos por ser una comunidad acogedora y respetuosa, y nos esforzamos por ayudar a cada uno de nosotros a alcanzar nuestros objetivos y lograr nuestras metas. Juntos, somos más fuertes y más unidos que nunca. ¡Que disfrutes de esta experiencia única y agradable!"
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="text-2xl mb-8 ml-5"
+          />
+        </div>
       </AdvancedModel.Video>
 
       <AdvancedModel.LocationSection
@@ -146,69 +124,105 @@ const ZonaEsteCongre = () => {
         />
       </AdvancedModel.LocationSection>
 
-
-
       <AdvancedModel.Footer>
-      <footer className="bg-black text-white px-6 py-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-
-          <div className="flex flex-col items-start space-y-2">
-            <div className=" rounded-full h-22 w-22 flex items-center justify-center">
-              <img src={logo} alt="Logo" className="h-30 w-auto" />
+        <footer className="bg-black text-white px-6 py-10">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="flex flex-col items-start space-y-2">
+              <div className=" rounded-full h-22 w-22 flex items-center justify-center">
+                <img src={logo} alt="Logo" className="h-30 w-auto" />
+              </div>
+              <p className="font-medium">Av. Carlos Loayza Beltran, La Paz</p>
+              <p>La Paz, Bolivia</p>
             </div>
-            <p className="font-medium">Av. Carlos Loayza Beltran, La Paz</p>
-            <p>La Paz, Bolivia</p>
+
+            <div className="flex flex-col space-y-2">
+              <h3 className="font-bold text-lg">RECURSOS</h3>
+              <a
+                href="#"
+                className="flex items-center space-x-2 hover:text-gray-400"
+              >
+                <span className="material-icons">podcasts</span>
+                <span>Podcast</span>
+              </a>
+              <a
+                href="#"
+                className="flex items-center space-x-2 hover:text-gray-400"
+              >
+                <span className="material-icons">music_note</span>
+                <span>MiSion Música</span>
+              </a>
+              <a
+                href="#"
+                className="flex items-center space-x-2 hover:text-gray-400"
+              >
+                <span className="material-icons">chat</span>
+                <span>Mensajes Misión</span>
+              </a>
+            </div>
+
+            {/* Columna 3: Contacto */}
+            <div className="flex flex-col space-y-2">
+              <h3 className="font-bold text-lg">CONTACTO</h3>
+              <p>Teléfono: + (5411) 4290 - 0000</p>
+              <p>WhatsApp: +5491176060023</p>
+              <p>Email: info@misioninstituto.com</p>
+            </div>
           </div>
 
-          <div className="flex flex-col space-y-2">
-            <h3 className="font-bold text-lg">RECURSOS</h3>
-            <a href="#" className="flex items-center space-x-2 hover:text-gray-400">
-              <span className="material-icons">podcasts</span>
-              <span>Podcast</span>
+          {/* Redes Sociales */}
+          <div className="mt-10 flex justify-center space-x-6">
+            <a
+              href="https://www.facebook.com/RocafielZonaEste"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FacebookIcon
+                className=" bg-white rounded-full p-1"
+                style={{ fontSize: 40 }}
+              />
             </a>
-            <a href="#" className="flex items-center space-x-2 hover:text-gray-400">
-              <span className="material-icons">music_note</span>
-              <span>MiSion Música</span>
+            <a
+              href="https://wa.me/591XXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsAppIcon
+                className=" bg-white rounded-full p-1"
+                style={{ fontSize: 40 }}
+              />
             </a>
-            <a href="#" className="flex items-center space-x-2 hover:text-gray-400">
-              <span className="material-icons">chat</span>
-              <span>Mensajes Misión</span>
+            <a
+              href="https://www.youtube.com/@RocafielZonaEste"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <YouTubeIcon
+                className=" bg-white rounded-full p-1"
+                style={{ fontSize: 40 }}
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/rocafiel_zona.este/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon
+                className=" bg-white rounded-full p-1"
+                style={{ fontSize: 40 }}
+              />
             </a>
           </div>
 
-          {/* Columna 3: Contacto */}
-          <div className="flex flex-col space-y-2">
-            <h3 className="font-bold text-lg">CONTACTO</h3>
-            <p>Teléfono: + (5411) 4290 - 0000</p>
-            <p>WhatsApp: +5491176060023</p>
-            <p>Email: info@misioninstituto.com</p>
-          </div>
-        </div>
-
-        {/* Redes Sociales */}
-        <div className="mt-10 flex justify-center space-x-6">
-          <a href="https://www.facebook.com/RocafielZonaEste" target="_blank" rel="noopener noreferrer">
-            <FacebookIcon className=" bg-white rounded-full p-1" style={{ fontSize: 40 }} />
-          </a>
-          <a href="https://wa.me/591XXXXXXXXX" target="_blank" rel="noopener noreferrer">
-            <WhatsAppIcon className=" bg-white rounded-full p-1" style={{ fontSize: 40 }} />
-          </a>
-          <a href="https://www.youtube.com/@RocafielZonaEste" target="_blank" rel="noopener noreferrer">
-            <YouTubeIcon className=" bg-white rounded-full p-1" style={{ fontSize: 40 }} />
-          </a>
-          <a href="https://www.instagram.com/rocafiel_zona.este/" target="_blank" rel="noopener noreferrer">
-            <InstagramIcon className=" bg-white rounded-full p-1" style={{ fontSize: 40 }} />
-          </a>
-        </div>
-
-        {/* Footer Inferior */}
-      </footer>
+          {/* Footer Inferior */}
+        </footer>
         <div className="bg-white p-10 flex flex-row justify-center text-sm text-gray-400">
           <p className="mr-25">Copyright © 2025</p>
           <p className="mr-25">MiSion Centro de Entrenamiento Ministerial</p>
-          <a href="#" className="hover:text-white">Políticas De Privacidad</a>
+          <a href="#" className="hover:text-white">
+            Políticas De Privacidad
+          </a>
         </div>
-    </AdvancedModel.Footer>
+      </AdvancedModel.Footer>
     </AdvancedModel>
   );
 };
