@@ -53,7 +53,7 @@ const BannerContent = styled.div`
 
 const BottomShape = styled.div`
   position: relative;
-  bottom: 31px;
+  bottom: 25px;
   width: 100%;
   overflow: hidden;
   line-height: 0;
@@ -193,7 +193,6 @@ const ZonaEsteCongre = () => {
 
       <BottomShape
         style={{
-          height: "-20vh",
           width: "w-full",
         }}
       >
@@ -233,51 +232,68 @@ const ZonaEsteCongre = () => {
 
 
       <AdvancedModel.Footer>
-        <footer className="w-full bg-white dark:bg-gray-900  border-gray-200 dark:border-gray-700 py-4 px-0">
-          <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
-            {/* Imagen a la izquierda */}
-            <div className="flex items-center">
-              <img src={logo} alt="Logo" className="h-22 w-auto" />
-              <p className="font-bold">Rocafiel</p>
+      <footer className="bg-black text-white px-6 py-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+          <div className="flex flex-col items-start space-y-2">
+            <div className=" rounded-full h-22 w-22 flex items-center justify-center">
+              <img src={logo} alt="Logo" className="h-30 w-auto" />
             </div>
-            {/* Iconos a la derecha */}
-            <div className="flex space-x-6">
-              <a
-                href="https://www.instagram.com/rocafiel_zona.este/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <InstagramIcon className="text-red" />
-              </a>
-              <a
-                href="https://www.facebook.com/RocafielZonaEste"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FacebookIcon />
-              </a>
-              <a
-                href="https://www.youtube.com/@RocafielZonaEste"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-              >
-                <YouTubeIcon />
-              </a>
-              <a
-                href="https://wa.me/591XXXXXXXXX"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-              >
-                <WhatsAppIcon />
-              </a>
-            </div>
+            <p className="font-medium">Av. Carlos Loayza Beltran, La Paz</p>
+            <p>La Paz, Bolivia</p>
           </div>
-        </footer>
-      </AdvancedModel.Footer>
+
+          <div className="flex flex-col space-y-2">
+            <h3 className="font-bold text-lg">RECURSOS</h3>
+            <a href="#" className="flex items-center space-x-2 hover:text-gray-400">
+              <span className="material-icons">podcasts</span>
+              <span>Podcast</span>
+            </a>
+            <a href="#" className="flex items-center space-x-2 hover:text-gray-400">
+              <span className="material-icons">music_note</span>
+              <span>MiSion Música</span>
+            </a>
+            <a href="#" className="flex items-center space-x-2 hover:text-gray-400">
+              <span className="material-icons">chat</span>
+              <span>Mensajes Misión</span>
+            </a>
+          </div>
+
+          {/* Columna 3: Contacto */}
+          <div className="flex flex-col space-y-2">
+            <h3 className="font-bold text-lg">CONTACTO</h3>
+            <p>Teléfono: + (5411) 4290 - 0000</p>
+            <p>WhatsApp: +5491176060023</p>
+            <p>Email: info@misioninstituto.com</p>
+          </div>
+        </div>
+
+        {/* Redes Sociales */}
+        <div className="mt-10 flex justify-center space-x-6">
+          <a href="https://www.facebook.com/RocafielZonaEste" target="_blank" rel="noopener noreferrer">
+            <FacebookIcon className="  rounded-full p-1" style={{ fontSize: 40 }} />
+          </a>
+          <a href="https://wa.me/591XXXXXXXXX" target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon color="success" className="  rounded-full p-1" style={{ fontSize: 40 }} />
+          </a>
+          <a href="https://www.youtube.com/@RocafielZonaEste" target="_blank" rel="noopener noreferrer">
+            <YouTubeIcon color="error" className="  rounded-full p-1" style={{ fontSize: 40 }} />
+          </a>
+          <a href="https://www.instagram.com/rocafiel_zona.este/" target="_blank" rel="noopener noreferrer">
+            <InstagramIcon color="info" className="  rounded-full p-1" style={{ fontSize: 40 }} />
+          </a>
+        </div>
+
+        {/* Footer Inferior */}
+        
+      </footer>
+      <div style={{backgroundColor:'#F8F8F8'}} className=" p-10 flex flex-row justify-center text-sm text-gray-400">
+          <p className="mr-25">Copyright © 2025</p>
+          <p className="mr-25">MiSion Centro de Entrenamiento Ministerial</p>
+          <a href="#" className="hover:text-white">Políticas De Privacidad</a>
+        </div>
+    </AdvancedModel.Footer>
+
     </AdvancedModel>
   );
 };

@@ -3,11 +3,11 @@ import React from "react";
 import styled from "styled-components";
 
 // --- Container general ---
-const PageWrapper = styled.div`
+const PageWrapper = styled.div<{ backgroundColor?: string }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FF9B45;
+  background-color: ${({ backgroundColor }) => backgroundColor || "#FF9B45"};
   gap: 20px;
 `;
 
@@ -28,8 +28,8 @@ const BannerContainer = styled.section`
 
 const VideoBackground = styled.video`
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 55%;
+  left: 49.9%;
   width: 100%;
   height: auto;
   min-height: 100%;
@@ -238,7 +238,7 @@ const LeftInfo = styled.div`
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    border-bottom: 3px solid #ff894f;
+    border-bottom: 3px solid #F1EFEC;
     display: inline-block;
     padding-bottom: 0.5rem;
   }
@@ -249,7 +249,7 @@ const LeftInfo = styled.div`
     margin-bottom: 1rem;
 
     strong {
-      color: #ff894f;
+      color: #1DCD9F;
     }
   }
 `;
@@ -259,6 +259,7 @@ const RightMap = styled.div`
   padding: 2rem;
   display: flex;
   justify-content: center;
+  background-color: #222222;
   align-items: center;
 
   iframe {
@@ -307,8 +308,8 @@ const QuoteAuthor = styled.p`
 
 
 // --- Componente principal ---
-const AdvancedPage = ({ children }: { children: React.ReactNode }) => {
-  return <PageWrapper>{children}</PageWrapper>;
+const AdvancedPage = ({ children, backgroundColor }: { children: React.ReactNode,backgroundColor?: string; }) => {
+  return <PageWrapper backgroundColor={backgroundColor}>{children}</PageWrapper>;
 };
 
 // --- Subcomponentes ---
