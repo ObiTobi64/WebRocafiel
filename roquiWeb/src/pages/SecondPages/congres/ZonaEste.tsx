@@ -209,10 +209,20 @@ const ZonaEsteCongre = () => {
         initialOpacity={0}
         className="w-full"
       >
+      <AdvancedModel.Quote />
+      </FadeContent>
+
+
+      <FadeContent
+        blur={false}
+        duration={1000}
+        easing="ease-out"
+        initialOpacity={0}
+        className="w-full"
+      >
         <AdvancedModel.IntroSection
           backgroundImage="https://scontent.flpb3-2.fna.fbcdn.net/v/t39.30808-6/486541484_1083686203801912_8111031106512359757_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=RHXWQ1FfPq4Q7kNvwEnAv9X&_nc_oc=Adk-jFZugXYOKkqAtpx6rd-gMx7et8GBJbw-m6m763LTfh3arBcsQsGFvKBAVziRFO8&_nc_zt=23&_nc_ht=scontent.flpb3-2.fna&_nc_gid=ToOWW8kkxBIveYW_nQv5fA&oh=00_AfTrcinlJ5y0ZMlNYYsr97mJxExS__0pUoAJ9C16lZ7CUg&oe=687E531D"
           backgroundPosition="center 20%"
-          leftTitle="Conoce"
           rightTitle="Matrimonios"
           rightText="Conoce nuestros eventos de matrimonios y nuestro programa de matrimonios."
           rightCallToAction="¿Quieres saber más?"

@@ -7,7 +7,7 @@ const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FF894F;
+  background-color: #FF9B45;
   gap: 20px;
 `;
 
@@ -212,20 +212,6 @@ const RightSide = styled.div`
   }
 `;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const LocationSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
@@ -282,6 +268,41 @@ const RightMap = styled.div`
     border-radius: 1rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   }
+`;
+
+//Seccion texto 
+
+const QuoteSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+`;
+
+const QuoteText = styled.blockquote`
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #1e1e1e;
+  max-width: 700px;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  &::before,
+  &::after {
+    content: '"';
+  }
+`;
+
+const QuoteAuthor = styled.p`
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
 `;
 
 
@@ -356,7 +377,7 @@ AdvancedPage.IntroSection = ({
   backgroundImage: string;
   backgroundPosition?: string;
   logoSrc?: string;
-  leftTitle: string;
+  leftTitle?: string;
   leftButtonText?: string;
   leftButtonHref?: string;
   rightTitle: string;
@@ -388,6 +409,16 @@ AdvancedPage.IntroSection = ({
   </IntroSectionContainer>
 );
 
+AdvancedPage.Quote = () => (
+  <QuoteSection>
+    <div>
+      <QuoteText>
+        Preocupémonos los unos por los otros, a fin de estimularnos al amor y a las buenas obras. No dejemos de congregarnos, como acostumbran hacerlo algunos, sino animémonos unos a otros, y con mayor razón ahora que vemos que aquel día se acerca.
+      </QuoteText>
+      <QuoteAuthor>Hebreos 10:24-25.</QuoteAuthor>
+    </div>
+  </QuoteSection>
+);
 
 // AdvancedPage.Info = ({
 //   address,
