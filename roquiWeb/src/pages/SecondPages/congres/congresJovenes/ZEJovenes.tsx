@@ -7,6 +7,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FadeContent from "../../../../components/effects/FadeContent";
 import BlurText from "../../../../components/effects/BlurText";
+import jovenesportada from "../../../../img/zonaesteitems/jovenesportada.jpg";
 
 const TitleWrapper = styled.div`
   display: flex;
@@ -79,7 +80,7 @@ const ZonaEsteCongre = () => {
               </BannerContent>
             </TitleWrapper>
           }
-          backgroundImage="https://scontent.flpb3-2.fna.fbcdn.net/v/t39.30808-6/514187472_1161134812723717_7313178816588307474_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8WlCzK2Rqo8Q7kNvwEaTNXh&_nc_oc=AdkJJz_zmrLe90flnT9ZH0F2xCS58XCSbaTxhokdBOYv119QB951yT-JBlNbnH0X-gU&_nc_zt=23&_nc_ht=scontent.flpb3-2.fna&_nc_gid=sy4k6ZJbbZoSdcvwN5Gg7Q&oh=00_AfS1YyS_uV3Bof0pLtj01ckwcOoBCXVfamZ1E08pAj6mVA&oe=687D1DBF"
+          backgroundImage={jovenesportada}
         />
       </FadeContent>
       <BottomShape>
